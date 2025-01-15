@@ -2,7 +2,7 @@ from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from sqlalchemy.ext.asyncio import AsyncEngine
 from sqlalchemy.orm import sessionmaker
 from .config import settings
-from zayavki.app.db.base import Base
+from ..db.base_db_model import Base
 
 DATABASE_URL = settings.DATABASE_URL
 engine: AsyncEngine = create_async_engine(DATABASE_URL, echo=True)

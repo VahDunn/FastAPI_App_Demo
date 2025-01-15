@@ -1,14 +1,12 @@
-version: "3.9"
-
 services:
   app:
     build:
-      context: .
-      dockerfile: docker/Dockerfile
+      context: docker
+      dockerfile: docker/applications.dockerfile
     ports:
       - "8000:8000"
     env_file:
-      - .env
+      - app/core/.env
     depends_on:
       - db
       - kafka

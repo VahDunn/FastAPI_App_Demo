@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.ext.asyncio import AsyncSession
-from zayavki.app.core.database import async_session
-from zayavki.app.db.repositories.application_repo import ApplicationRepository
-from zayavki.app.core.kafka import kafka_applications_producer
-from zayavki.app.core.config import settings
+from ...core.database import async_session
+from ...db.repositories.application_repo import ApplicationRepository
+from ...core.kafka import kafka_applications_producer
+from ...core.config import settings
 
 application_router = APIRouter()
 
