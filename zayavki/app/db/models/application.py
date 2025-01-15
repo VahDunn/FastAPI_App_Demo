@@ -1,5 +1,5 @@
 from sqlalchemy import Column, String, Integer, DateTime, func
-from ...core.database import Base
+from zayavki.app.db.base import Base
 
 
 class Application(Base):
