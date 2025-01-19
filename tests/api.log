@@ -1,0 +1,25 @@
+2025-01-19 19:36:21,438 - app.utils.logger - INFO - API is starting up
+2025-01-19 19:36:21,438 - app.utils.logger - INFO - <property object at 0x107b4b560>
+2025-01-19 19:36:21,438 - app.utils.logger - INFO - FastAPI says Hello!
+2025-01-19 19:37:53,861 - app.utils.logger - INFO - API is starting up
+2025-01-19 19:37:53,861 - app.utils.logger - INFO - <property object at 0x105d9b290>
+2025-01-19 19:37:53,861 - app.utils.logger - INFO - FastAPI says Hello!
+2025-01-19 19:41:28,160 - app.utils.logger - INFO - API is starting up
+2025-01-19 19:41:28,160 - app.utils.logger - INFO - <property object at 0x10775f290>
+2025-01-19 19:41:28,160 - app.utils.logger - INFO - FastAPI says Hello!
+2025-01-19 19:41:59,763 - app.utils.logger - INFO - API is starting up
+2025-01-19 19:41:59,767 - app.utils.logger - INFO - <property object at 0x1039ff010>
+2025-01-19 19:41:59,767 - app.utils.logger - INFO - FastAPI says Hello!
+2025-01-19 19:42:20,253 - app.utils.logger - INFO - API is starting up
+2025-01-19 19:42:20,253 - app.utils.logger - INFO - <property object at 0x10538f3d0>
+2025-01-19 19:42:20,253 - app.utils.logger - INFO - FastAPI says Hello!
+2025-01-19 19:42:49,619 - app.utils.logger - INFO - API is starting up
+2025-01-19 19:42:49,620 - app.utils.logger - INFO - <property object at 0x1054473d0>
+2025-01-19 19:42:49,620 - app.utils.logger - INFO - FastAPI says Hello!
+2025-01-19 19:43:46,454 - app.utils.logger - INFO - API is starting up
+2025-01-19 19:43:46,454 - app.utils.logger - INFO - <property object at 0x10358b010>
+2025-01-19 19:43:46,455 - app.utils.logger - INFO - FastAPI says Hello!
+2025-01-19 21:13:49,588 - app.utils.logger - INFO - API is starting up
+2025-01-19 21:13:49,588 - app.utils.logger - INFO - <property object at 0x120e34770>
+2025-01-19 21:14:03,700 - app.utils.logger - INFO - API is starting up
+2025-01-19 21:14:03,700 - app.utils.logger - INFO - <property object at 0x105c7ca90>

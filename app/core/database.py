@@ -15,3 +15,7 @@ async def init_db():
 
 async def stop_db():
     await engine.dispose()
+
+async def get_db():
+    async with async_session() as session:
+        yield session

@@ -1,13 +1,12 @@
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
     DATABASE_URL: str
-    KAFKA_SERVER: str
+    KAFKA_BOOTSTRAP_SERVER: str
     KAFKA_TOPIC: str
 
-    class Config:
-        env_file = "/Users/vladislavmorozov/Documents/Dev/FastAPI_Zayavochki/app/core/settings.env"
+    model_config = SettingsConfigDict(env_file="app/core/settings.env")
 
 
 settings = Settings()

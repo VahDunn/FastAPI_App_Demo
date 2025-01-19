@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b6aa702-842f-4116-8de0-2f91df0a329a" name="Changes" comment="bug and requirement fixes" />
+    <list default="true" id="0b6aa702-842f-4116-8de0-2f91df0a329a" name="Changes" comment="bug and requirement fixes">
+      <change afterPath="$PROJECT_DIR$/app/core/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/schemas/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/schemas/application_schema.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/api.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_api_applications.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FastAPI_Zayavochki.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FastAPI_Zayavochki.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/endpoints/applications.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/endpoints/applications.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/kafka.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/kafka.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/settings.env" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/settings.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/db/base_db_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/base_db_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/db/models/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/models/application_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/applications.dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/applications.dockerfile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +57,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python tests.Python tests in test_api_applications.py.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -52,6 +76,28 @@
       <recent name="$PROJECT_DIR$/zayavki" />
       <recent name="$PROJECT_DIR$/zayavki/app" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Python tests in test_api_applications.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="FastAPI_Zayavochki" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_api_applications.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests in test_api_applications.py" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
