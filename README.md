@@ -61,19 +61,20 @@ Docker + Docker Compose.
         "user_name": "Ilyas_Apunov",
         "description": "Need administrative access"
     }
-    Ожидаемые возвращаемые данные (для данного примера): {
-        "id": 1,
-        "user_name": "Ilyas_Apunov",
-        "description": "Need administrative access",
-        "created_at": "2025-01-17 17:34:54.611089"
-    }
+    Ожидаемые возвращаемые данные (для данного примера):
+  *     {
+          "id": 1,
+          "user_name": "Ilyas_Apunov",
+          "description": "Need administrative access",
+          "created_at": "2025-01-17 17:34:54.611089"
+      }
 *    с методом GET - через query принимает параметры:
         - user_name - имя пользователя
         - количество заявок на странице (опционально)
         - номер страницы (опционально)
         возвращает список заявок (пагинация и фильтрация по имени пользователя реализованы).
     Пример запроса для localhost через браузер:
-    - http://localhost:8000/applications?size=5&page=1
+*    - http://localhost:8000/applications?size=5&page=1
     Пример возвращаемых данных:
 *                {
                     "created_at": "2025-01-17T17:49:50.634683",
