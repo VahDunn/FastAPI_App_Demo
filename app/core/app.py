@@ -1,4 +1,3 @@
-from aiokafka import AIOKafkaProducer
 from fastapi import FastAPI
 from ..utils.logger import LOG
 
@@ -8,5 +7,6 @@ app = FastAPI(
     description = "Сервис для обработки заявок пользователей",
     version = "1.0.0"
 )
+
 
 LOG.info("FastAPI says Hello!")

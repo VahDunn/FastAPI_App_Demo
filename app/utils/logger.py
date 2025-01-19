@@ -43,4 +43,3 @@ logging.config.dictConfig(logging_config)
 LOG = logging.getLogger(__name__)
 
 LOG.info("API is starting up")
-LOG.info(uvicorn.Config.asgi_version)

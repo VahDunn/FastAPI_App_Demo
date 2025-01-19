@@ -3,21 +3,23 @@ from unittest.mock import Mock, AsyncMock
 from datetime import datetime
 from app.schemas.application_schema import ApplicationResponse, ApplicationCreate
 from app.api.endpoints.applications import create_application, get_applications_list
+from app.core.app import app
 
 
-# Фикстуры для тестов
 @pytest.fixture
-def mock_application_repo(mocker):
+def mock_application_repo():
     mock = AsyncMock()
-    mocker.patch('app.db.repositories.application_repo.ApplicationRepository', return_value=mock)
+    mock.create_application = AsyncMock()
+    mock.get_applications = AsyncMock()
     return mock
+
 
 
 @pytest.fixture
 def mock_kafka_producer(mocker):
-    mock = AsyncMock()
-    mocker.patch('app.core.app.app.producer.send_and_wait', return_value=mock)
-    return mock
+    producer = AsyncMock()
+    app.producer = producer
+    return producer
 
 
 @pytest.fixture
@@ -25,11 +27,10 @@ def mock_db():
     return AsyncMock()
 
 
-# Тесты
+
 @pytest.mark.asyncio
 async def test_create_application(mock_application_repo, mock_kafka_producer, mock_db):
-    # Подготовка тестовых данных
-    test_date = datetime(2024, 3, 21, 12, 0, 0)
+    test_date = str(datetime(2024, 3, 21, 12, 0, 0))
     mock_application_repo.create_application.return_value = ApplicationResponse(
         id=1,
         user_name="Test Application",
@@ -38,8 +39,8 @@ async def test_create_application(mock_application_repo, mock_kafka_producer, mo
     )
 
     application_data = ApplicationCreate(
-        user_name="Test Application",
-        description="Test Description"
+        user_name="Test_Application",
+        description="Test_Description"
     )
 
     # Выполнение тестируемой функции
@@ -70,7 +71,7 @@ async def test_create_application(mock_application_repo, mock_kafka_producer, mo
 @pytest.mark.asyncio
 async def test_get_applications_list_without_filters(mock_application_repo, mock_db):
     # Подготовка тестовых данных
-    test_date = datetime(2024, 3, 21, 12, 0, 0)
+    test_date = str(datetime(2024, 3, 21, 12, 0, 0))
     mock_application_repo.get_applications.return_value = [
         ApplicationResponse(
             id=1,
@@ -102,7 +103,7 @@ async def test_get_applications_list_without_filters(mock_application_repo, mock
 @pytest.mark.asyncio
 async def test_get_applications_list_with_username_filter(mock_application_repo, mock_db):
     # Подготовка тестовых данных
-    test_date = datetime(2024, 3, 21, 12, 0, 0)
+    test_date = str(datetime(2024, 3, 21, 12, 0, 0))
     mock_application_repo.get_applications.return_value = [
         ApplicationResponse(
             id=1,
@@ -112,10 +113,8 @@ async def test_get_applications_list_with_username_filter(mock_application_repo,
         )
     ]
 
-    # Выполнение тестируемой функции
     response = await get_applications_list(user_name="Test User", page=1, size=10, db=mock_db)
 
-    # Проверки
     mock_application_repo.get_applications.assert_called_once_with("Test User", 0, 10)
 
     assert len(response) == 1
@@ -125,7 +124,7 @@ async def test_get_applications_list_with_username_filter(mock_application_repo,
 @pytest.mark.asyncio
 async def test_get_applications_list_pagination(mock_application_repo, mock_db):
     # Подготовка тестовых данных
-    test_date = datetime(2024, 3, 21, 12, 0, 0)
+    test_date = str(datetime(2024, 3, 21, 12, 0, 0))
     mock_application_repo.get_applications.return_value = [
         ApplicationResponse(
             id=3,
@@ -135,10 +134,8 @@ async def test_get_applications_list_pagination(mock_application_repo, mock_db):
         )
     ]
 
-    # Выполнение тестируемой функции
     response = await get_applications_list(user_name=None, page=2, size=2, db=mock_db)
 
-    # Проверки
     mock_application_repo.get_applications.assert_called_once_with(None, 2, 2)
 
     assert len(response) == 1

@@ -55,6 +55,6 @@ async def get_applications_list(
         applications = await repo.get_applications(user_name, skip, size)
         LOG.info(f"Retrieved {len(applications)} applications for query: user_name={user_name}, page={page}, size={size}")
         return applications
-    except exception as e:
+    except Exception as e:
         LOG.info("Something happened")
         LOG.error(f"{str(e)}")
