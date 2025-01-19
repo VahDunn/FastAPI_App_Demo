@@ -1,6 +1,12 @@
 import logging.config
 import uvicorn
+import os
 
+
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+log_path = os.path.join(script_dir, 'logs', 'log.txt')
+logging.FileHandler(log_path)
 
 logging_config = {
     'version': 1,
@@ -21,7 +27,7 @@ logging_config = {
             'class': 'logging.handlers.RotatingFileHandler',
             'level': 'INFO',
             'formatter': 'standard',
-            'filename': 'applications.log',
+            'filename': 'api.log',
             'maxBytes': 1024*1024,
             'backupCount': 5,
             'encoding': 'utf-8'

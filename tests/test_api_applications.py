@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import Mock, AsyncMock
 from datetime import datetime
-from app.schemas.application import ApplicationResponse, ApplicationCreate
+from app.schemas.application_schema import ApplicationResponse, ApplicationCreate
 from app.api.endpoints.applications import create_application, get_applications_list
 
 

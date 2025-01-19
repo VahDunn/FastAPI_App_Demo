@@ -3,11 +3,11 @@ from logging import exception
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from ...db.models.application import Application
+from ...db.models.application_model import Application
 from ...db.repositories.application_repo import ApplicationRepository
 from app.core.app import app
 from ...core.config import settings
-from ...schemas.application import ApplicationCreate, ApplicationResponse
+from ...schemas.application_schema import ApplicationCreate, ApplicationResponse
 from ...core.database import get_db
 from ...utils.logger import LOG
 
@@ -25,7 +25,7 @@ async def create_application(
     repo = ApplicationRepository(db)
     application = await repo.create_application(application_data.user_name, application_data.description)
     LOG.info(f"New application with id {application.id} for user {application.user_name}\
-     was crated at {application.created_at}")
+     was created at {application.created_at}")
     LOG.info(f"Application description: {application.description}")
 
     message = {
