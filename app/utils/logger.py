@@ -4,9 +4,6 @@ import os
 
 
 
-script_dir = os.path.dirname(os.path.abspath(__file__))
-log_path = os.path.join(script_dir, 'logs', 'log.txt')
-logging.FileHandler(log_path)
 
 logging_config = {
     'version': 1,
