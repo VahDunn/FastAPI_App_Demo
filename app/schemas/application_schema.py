@@ -9,7 +9,7 @@ class ApplicationCreate(BaseModel):
     )
     description: str = Field(
         ...,
-        description="Описание приложения",
+        description="Описание заявки",
         min_length=1,
         max_length=500,
     )

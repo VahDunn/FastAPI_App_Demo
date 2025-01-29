@@ -1,7 +1,4 @@
 import logging.config
-import uvicorn
-import os
-
 
 
 
